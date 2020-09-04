@@ -1,0 +1,15 @@
+body, html {
+    background: #eeeeee;
+}
+.grreen{
+    height: 100px;
+    background-color:green;
+}
+.yellow{
+    height: 100px;
+    background-color:yellow;
+}
+.red{
+    height: 100px;
+    background-color:red;
+}
