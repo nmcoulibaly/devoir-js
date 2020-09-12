@@ -56,7 +56,7 @@ forceDahsboard();
             </div>
 
             <button class="btn btn-success text-uppercase" type="submit">Creer un compte</button>
-           
+
             <div class="mt-4 alert alert-danger" id="box_error"></div>
           </form>
 
@@ -76,6 +76,8 @@ forceDahsboard();
 
 
   <!-- Personal files -->
+  <script src="assets/js/functions.js"></script>
+
   <script src="assets/js/scripts.js"></script>
 </body>
 

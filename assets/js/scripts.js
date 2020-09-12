@@ -1,5 +1,15 @@
 (function ($) {
     $(document).ready(function () {
+        loadBuildingTable('tBuilding');
+        loadBedroomTable('tBedroom');
+        loadStudentTable('tStudent');
+
+        $('#saveBuilding').on('click', function (event) {
+            saveBuilding(event);
+        })
+        $('#saveBedroom').on('click', function (event) {
+            saveBedroom(event);
+        })
         // Cette partie du code s'execute des que tout le DOM a fini de charger
         $('#form_register').on('submit', function (event) {
             event.preventDefault();
@@ -43,23 +53,23 @@
             }
 
             $.ajax({
-                type: 'POST',
-                url: '/universite/ajax/register.php',
-                data: dataObj,
-                dataType: 'json',
-                async: true
-            })
-            .done(function (data) {
-                if (data.redirect !== 'undefined') {
-                    window.location = data.redirect;
-                }
-            })
-            .fail(function (error) {
-                console.log(error)
-            })
-            .always(function (data) {
-                console.log("Always")
-            })
+                    type: 'POST',
+                    url: '/universite/ajax/register.php',
+                    data: dataObj,
+                    dataType: 'json',
+                    async: true
+                })
+                .done(function (data) {
+                    if (data.redirect !== 'undefined') {
+                        window.location = data.redirect;
+                    }
+                })
+                .fail(function (error) {
+                    console.log(error)
+                })
+                .always(function (data) {
+                    console.log("Always")
+                })
 
             // Vider les champs mot de passe et confirmation des la soumission du formulaire
             $('#passwd').val('')
@@ -94,23 +104,23 @@
             }
 
             $.ajax({
-                type: 'POST',
-                url: '/universite/ajax/login.php',
-                data: dataObj,
-                dataType: 'json',
-                async: true
-            })
-            .done(function (data) {
-                if (data.redirect !== 'undefined') {
-                    window.location = data.redirect;
-                }
-            })
-            .fail(function (error) {
-                console.log(error)
-            })
-            .always(function (data) {
-                console.log("Always")
-            })
+                    type: 'POST',
+                    url: '/universite/ajax/login.php',
+                    data: dataObj,
+                    dataType: 'json',
+                    async: true
+                })
+                .done(function (data) {
+                    if (data.redirect !== 'undefined') {
+                        window.location = data.redirect;
+                    }
+                })
+                .fail(function (error) {
+                    console.log(error)
+                })
+                .always(function (data) {
+                    console.log("Always")
+                })
         });
 
         $('#box_error').hide()

@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $userId = $conn->lastInsertId();
         $_SESSION['user_id'] = (int) $userId;
-        $return['redirect'] = 'universite/dashboard.php?message=Welcome';
+        $return['redirect'] = 'dashboard.php?message=Welcome';
         $return['is_logged_in'] = true;
 
     }

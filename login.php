@@ -44,9 +44,9 @@ forceDahsboard();
               <label for="passwd">Password: </label>
               <input type="password" id="passwd" autocomplete="new-password" class="form-control">
             </div>
-              <button class="btn btn-success text-uppercase" type="submit">Se connecter</button>
-           
-              <div class="mt-4 alert alert-danger" id="box_error"></div>
+            <button class="btn btn-success text-uppercase" type="submit">Se connecter</button>
+
+            <div class="mt-4 alert alert-danger" id="box_error"></div>
           </form>
 
         </div>
@@ -65,6 +65,8 @@ forceDahsboard();
 
 
   <!-- Personal files -->
+  <script src="assets/js/functions.js"></script>
+
   <script src="assets/js/scripts.js"></script>
 </body>
 

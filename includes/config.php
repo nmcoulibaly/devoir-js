@@ -8,5 +8,4 @@ session_start();
 
 require_once "functions.php";
 require_once 'DB.php';
-
 $conn = DB::getConnection();
